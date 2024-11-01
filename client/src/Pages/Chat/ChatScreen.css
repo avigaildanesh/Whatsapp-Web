@@ -1,0 +1,365 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.ChatScreen {
+  margin-top: 50px;
+  position: relative;
+  width: 100vw;
+  max-width: 1000px;
+  height: 90vh;
+  min-height: 400px;
+  display: flex;
+  min-width: 500px;
+  border-radius: 20px;
+}
+
+.ChatScreen .leftSide {
+  position: relative;
+  background-color: aliceblue;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  flex: 30%;
+  border-radius: 20px;
+}
+
+.ChatScreen .noFriends {
+  text-align: center;
+  background-color: rgb(203, 235, 250);
+  padding-top: 10em;
+  margin-top: 20%;
+  height: 50%;
+}
+
+.ChatScreen .rightSide {
+  position: relative;
+  flex: 70%;
+  background-color: rgb(203, 235, 250);
+  border-radius: 20px;
+  overflow: auto;
+}
+
+.ChatScreen .header {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background-color: rgb(175, 217, 253);
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  overflow: hidden;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.ChatScreen .userimg {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-right: 50%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.ChatScreen .username {
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 10px;
+  flex: 1;
+}
+
+.ChatScreen .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.ChatScreen .icons {
+  font-size: 20px;
+  display: flex;
+}
+.ChatScreen .icons li {
+  list-style: none;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 15px;
+  font-size: 1.2em;
+}
+
+.ChatScreen .chatlist {
+  position: relative;
+  height: calc(100% - 100px);
+  overflow: hidden;
+  width: 300px;
+  overflow-y: auto;
+}
+.ChatScreen .chatlist .block {
+  position: relative;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  height: 70px;
+  
+}
+
+.ChatScreen .chatlist .block .active {
+  background-color: rgb(240, 252, 255);
+}
+.ChatScreen .chatlist .block:hover {
+  background-color: rgb(253, 253, 253);
+}
+.ChatScreen .chatlist {
+  gap: 1em;
+}
+
+.ChatScreen .chatlist .block .imgBox {
+  position: relative;
+  min-width: 45px;
+  height: 45px;
+  overflow: visible;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.ChatScreen .chatlist .block .details {
+  position: relative;
+  width: 220px;
+  max-width: 220px;
+}
+
+.ChatScreen .chatlist .block .details .listHead {
+  display: flex;
+  justify-content: space-between;
+}
+.ChatScreen .chatlist .block .details .listHead h4 {
+  padding-top: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.ChatScreen .chatlist .block .details .listHead .date {
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.ChatScreen .chatlist .block.unread .details .listHead .date {
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-top: 10px;
+  color: rgb(10, 170, 10);
+}
+
+.ChatScreen .message_p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ChatScreen .message_p p {
+  color: rgb(129, 129, 129);
+  font-size: 1em;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ChatScreen .message_p b {
+  background-color: rgb(12, 196, 12);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+/* Right side */
+
+.ChatScreen .imgText {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChatScreen .imgText h4 {
+  font-weight: 500;
+  font-size: 0.75em;
+  line-height: 1.2em;
+  margin-left: 15px;
+}
+
+.ChatScreen .myfile {
+  color: black;
+  background-color: rgb(113, 186, 250);
+  border: none;
+}
+.ChatScreen .myfile:hover {
+  background: linear-gradient(
+    to right,
+    #240a96 0%,
+    #870aa0 40%,
+    #870aa0 60%,
+    #bd1e93 100%
+  );
+  color: black;
+  border: none;
+}
+
+
+
+.ChatScreen .imgText h4 span {
+  font-weight: 400;
+  font-size: 0.85em;
+  line-height: 1.2em;
+}
+
+.ChatScreen .chatBox {
+  position: relative;
+  width: 100%;
+  height: 85%;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+
+.ChatScreen .message {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.ChatScreen .message p {
+  position: relative;
+  text-align: left;
+  max-width: 35%;
+  min-width: 150px;
+  padding-left: 10px;
+  padding-bottom: 18px;
+  background-color: rgba(200, 44, 231, 0.301);
+  border-radius: 5px;
+  display: flex;
+}
+
+.ChatScreen .chat_input button {
+  white-space: nowrap;
+  float: left;
+}
+.ChatScreen .chat_input {
+  white-space: nowrap;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.ChatScreen .friend_message p {
+  background-color: rgba(64, 25, 207, 0.473);
+}
+
+.ChatScreen .message p span {
+  color: rgb(100, 100, 100);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+}
+
+
+
+
+.container #exit-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 35px;
+  margin: 10px;
+  background: linear-gradient(to bottom, #9900ff, #ff6600);
+  color: white;
+  border-radius: 5px;
+}
+
+.ChatScreen #exit-btn:hover {
+  background-color: #ddd;
+}
+
+.ChatScreen .my_message {
+  justify-content: flex-start;
+}
+
+.ChatScreen .friend_message {
+  justify-content: flex-end;
+}
+
+
+
+.ChatScreen .input_msg {
+  box-sizing: border-box;
+  width: calc(
+    100% - 80px
+  ); /* adjust the width to account for the button and margin */
+  float: left;
+  padding: 5px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  outline: none;
+}
+
+.ChatScreen .sendbtn {
+  float: left;
+  background-color: rgba(200, 44, 231, 0.599);
+  border: none;
+  font-weight: 500;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  text-align: center;
+}
+.ChatScreen .sendbtn:hover {
+  background: linear-gradient(
+    to right,
+    #240a96 0%,
+    #870aa0 40%,
+    #870aa0 60%,
+    #bd1e93 100%
+  );
+}
+

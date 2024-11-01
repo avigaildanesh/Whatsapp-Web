@@ -1,0 +1,76 @@
+.LoginScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25em;
+  height: 25em;
+  margin-top: 150px;
+  border: 1px solid #000;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  gap: 1em;
+}
+
+.LoginScreen ::placeholder {
+  font-weight: bold;
+}
+.LoginScreen .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.LoginScreen #logintitle {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 12px;
+  margin-top: -40px;
+  background-image: linear-gradient(to right, #40e0d0, #a86dd1, #c9a0dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.LoginScreen .form-field label {
+  position: absolute;
+  padding: 0.5em;
+  font-weight: bold;
+  color: #555;
+}
+.LoginScreen .form-field i {
+  margin-right: 0.5em;
+}
+
+.LoginScreen .form-field input {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.LoginScreen #buttonlogin {
+  background: linear-gradient(to right, #40e0d0, #a86dd1, #c9a0dc);
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid rgb(86, 52, 108);
+  align-self: center;
+}
+
+.LoginScreen .textbox {
+  width: 200px;
+  background-color: rgb(205, 189, 221);
+}
+
+.LoginScreen .errorMessage {
+  color: red;
+}

@@ -1,0 +1,122 @@
+.RegisterScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25em;
+  height: 40em;
+  margin-top: 40px;
+  border: 1px solid #000;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  gap: 1em;
+}
+
+.RegisterScreen ::placeholder {
+  font-weight: bold;
+}
+.RegisterScreen .passwordRole{
+  width: 60%;
+}
+
+.RegisterScreen .errorMessage {
+  text-align: center;
+  color: crimson;
+}
+.RegisterScreen .title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 40px;
+  background-image: linear-gradient(to right, #40e0d0, #a86dd1, #c9a0dc);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.RegisterScreen .form-field {
+  gap: 1em;
+}
+.RegisterScreen .form-field label {
+  position: absolute;
+  padding: 0.5em;
+
+  font-weight: bold;
+  color: #555;
+}
+
+.RegisterScreen .form-field i {
+  margin-right: 0.5em;
+}
+
+.RegisterScreen .form-field input {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.RegisterScreen .userName {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.RegisterScreen .textbox {
+  width: 200px;
+  background-color: rgb(205, 189, 221);
+}
+
+.RegisterScreen .upload-box {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+}
+
+.RegisterScreen .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.RegisterScreen .upload-box label {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.RegisterScreen .image-preview {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.RegisterScreen .box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.RegisterScreen .regBtn {
+  background: linear-gradient(to right, #40e0d0, #a86dd1, #c9a0dc);
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid rgb(86, 52, 108);
+  align-self: center;
+}
